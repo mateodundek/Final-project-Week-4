@@ -1,13 +1,13 @@
-let api
-let moviesData
+let api;
+let moviesData;
 
 async function main(filter) {
-   api = await fetch("https://www.omdbapi.com/?apikey=c510394&s=game");
-   moviesData = await api.json();
-   const movieListEl = document.querySelector(".movies");
-   
-   if(!api) {
-    api = moviesData 
+  api = await fetch("https://www.omdbapi.com/?apikey=c510394&s=game");
+  moviesData = await api.json();
+  const movieListEl = document.querySelector(".movies");
+
+  if (!api) {
+    api = moviesData;
   }
 
   if (filter === "year__low-to-high") {
