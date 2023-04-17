@@ -1,7 +1,7 @@
 let api
 let moviesData
 
-async function main() {
+async function main(filter) {
    api = await fetch("https://www.omdbapi.com/?apikey=c510394&s=game");
    moviesData = await api.json();
    const movieListEl = document.querySelector(".movies");
