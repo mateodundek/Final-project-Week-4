@@ -21,7 +21,7 @@
             <ul class="nav__list">
               <li class="nav__links">
                 <a class="nav__link" href="#">Movies</a>
-                <a class="nav__link" href="#">TV shows</a>
+                <a class="nav__link" href="#">Series</a>
                 <button class="nav__btn">Sign In</button>
               </li>
             </ul>
@@ -37,7 +37,7 @@
           <p class="header__para">Search for your favourite movie or TV show</p>
           <form action="#" class="form__container">
             <input
-              class="search__container"
+              id="searchbar"
               type="text"
               placeholder="Seach by title"
             />
@@ -51,13 +51,15 @@
         <div class="row">
           <div class="search-results__wrapper">
             <h2>Search results:</h2>
-            <select id="filter">
+            <select id="filter" onchange="filterMovies(event)">
               <option value="" disabled selected>Sort</option>
-              <option value="year">Year</option>
-              <option value="type">Type</option>
+              <option value="year__low-to-high">Year, low to high</option>
+              <option value="year__high-to-low">Year, high to low</option>
             </select>
           </div>
-          <div class="movies"></div>
+          <div class="movies">
+            <i class="fas fa-spinner movies__loading--spinner"></i>
+          </div>
         </div>
       </section>
     </header>
