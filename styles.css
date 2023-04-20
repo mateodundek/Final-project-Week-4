@@ -73,7 +73,12 @@ NAVIGATION BAR
 
 .nav__btn:hover,
 .search__btn:hover {
-  transform: scale(0.9);
+  background-color: red;
+}
+
+.nav__btn:active,
+.search__btn:active {
+  transform: scale(0.8);
 }
 
 /*

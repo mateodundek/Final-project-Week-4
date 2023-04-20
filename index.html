@@ -34,9 +34,9 @@
       <section>
         <div class="row header__container">
           <h1 class="header__title">Get started</h1>
-          <p class="header__para">Search for your favourite movie or TV show</p>
+          <p class="header__para">Search for your favourite Movie or Series</p>
           <form action="#" class="form__container">
-            <input id="searchbar" type="text" placeholder="Seach by title" />
+            <input id="searchbar" type="search" placeholder="Seach by title" />
             <button class="search__btn">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
@@ -49,8 +49,8 @@
             <h2>Search results:</h2>
             <select id="filter" onchange="filterMovies(event)">
               <option value="" disabled selected>Sort</option>
-              <option value="year__low-to-high">Year, low to high</option>
-              <option value="year__high-to-low">Year, high to low</option>
+              <option value="year__old-to-new">Year: Oldest to Newest</option>
+              <option value="year__new-to-old">Year: Newest to Oldest</option>
             </select>
           </div>
           <div class="movies">

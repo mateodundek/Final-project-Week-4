@@ -3,9 +3,9 @@ async function main(filter) {
   const moviesData = await api.json();
   const movieListEl = document.querySelector(".movies");
 
-  if (filter === "year__low-to-high") {
+  if (filter === "year__old-to-new") {
     moviesData.Search.sort((a, b) => a.Year.slice(0, 4) - b.Year.slice(0, 4));
-  } else if (filter === "year__high-to-low") {
+  } else if (filter === "year__new-to-old") {
     moviesData.Search.sort((a, b) => b.Year.slice(0, 4) - a.Year.slice(0, 4));
   }
 
