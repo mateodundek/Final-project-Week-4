@@ -73,7 +73,7 @@ NAVIGATION BAR
 
 .nav__btn:hover,
 .search__btn:hover {
-  background-color: red;
+  color: red;
 }
 
 .nav__btn:active,
