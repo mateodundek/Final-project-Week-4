@@ -40,11 +40,12 @@ function filterMovies(event) {
 
 function searchMovies(event) {
   event.preventDefault();
-  const searchBar = document.getElementById("searchbar").value;
+  const searchBar = document.getElementById("searchbar").value
   const filteredMovies = moviesData.Search.filter((movie) => {
     return movie.Title.includes(searchBar)
   })
   main(filteredMovies)
+  console.log(filteredMovies)
 }
 
 setTimeout(() => {
