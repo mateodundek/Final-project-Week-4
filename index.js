@@ -1,8 +1,9 @@
 const movieListEl = document.querySelector(".movies");
 let moviesdata = [];
+let api = []
 
 async function main(filter) {
-  const api = await fetch("https://www.omdbapi.com/?apikey=c510394&s=game");
+  api = await fetch("https://www.omdbapi.com/?apikey=c510394&s=game");
   moviesData = await api.json();
 
   if (filter === "year__old-to-new") {
@@ -40,12 +41,8 @@ function filterMovies(event) {
 
 function searchMovies(event) {
   event.preventDefault();
-  const searchBar = document.getElementById("searchbar").value
-  const filteredMovies = moviesData.Search.filter((movie) => {
-    return movie.Title.includes(searchBar)
-  })
-  main(filteredMovies)
-  console.log(filteredMovies)
+  const movieName = document.getElementById("searchbar").value
+  main(movieName)
 }
 
 setTimeout(() => {
