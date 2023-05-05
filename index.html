@@ -33,8 +33,7 @@
     <header>
       <section>
         <div class="row header__container">
-          <h1 class="header__title">Get started</h1>
-          <p class="header__para">Search for your favourite Movie or Series</p>
+          <p class="header__para">Search your favourite Movies or Series</p>
           <form onsubmit="searchMovies(event)" class="form__container">
             <input id="searchbar" type="search" placeholder="Seach by title" />
             <button class="search__btn">
@@ -46,16 +45,14 @@
       <section class="result__section">
         <div class="row">
           <div class="search-results__wrapper">
-            <h2>Search results:</h2>
+            <h2 id="search__result--header"></h2>
             <select id="filter" onchange="filterMovies(event)">
               <option value="" disabled selected>Sort by:</option>
               <option value="year__old-to-new">Year: Oldest to Newest</option>
               <option value="year__new-to-old">Year: Newest to Oldest</option>
             </select>
           </div>
-          <div class="movies">
-            <i class="fas fa-spinner movies__loading--spinner"></i>
-          </div>
+          <div class="movies"></div>
         </div>
       </section>
     </header>

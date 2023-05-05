@@ -28,6 +28,7 @@ body {
 h1 {
   font-size: 20px;
   font-weight: 700;
+  color: orange;
 }
 
 /*
@@ -56,11 +57,11 @@ NAVIGATION BAR
   transition: all 300ms ease;
 }
 .nav__link:hover {
-  color: aqua;
+  color: orange;
 }
 
 .nav__btn {
-  background-color: aqua;
+  background-color: orange;
   color: black;
   font-size: 16px;
   font-weight: 700;
@@ -73,7 +74,7 @@ NAVIGATION BAR
 
 .nav__btn:hover,
 .search__btn:hover {
-  color: red;
+  color: white;
 }
 
 .nav__btn:active,
@@ -86,7 +87,7 @@ HEADER
 */
 
 .header__container {
-  margin-top: 24px;
+  margin-top: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,7 +103,7 @@ HEADER
 }
 
 #searchbar {
-  border: 3px solid aqua;
+  border: 3px solid orange;
   border-radius: 24px;
   height: 48px;
   width: 400px;
@@ -110,8 +111,6 @@ HEADER
   padding-left: 12px;
   padding-right: 48px;
   font-size: 18px;
-  background-color: black;
-  color: aqua;
 }
 
 .search__btn {
@@ -123,19 +122,15 @@ HEADER
   font-size: 24px;
   border: none;
   border-radius: 50%;
-  background-color: aqua;
+  background-color: orange;
   margin-right: 12px;
   cursor: pointer;
   transition: all 300ms ease;
 }
 
-.header__title {
-  font-size: 42px;
-}
-
 .header__para {
-  font-size: 24px;
-  margin-top: 12px;
+  font-size: 36px;
+  font-weight: bold;
 }
 
 /*
@@ -149,6 +144,7 @@ SEARCH RESULTS
 .search-results__wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 12px;
 }
 
 .search__results {
@@ -176,14 +172,15 @@ SEARCH RESULTS
 }
 
 #filter {
-  width: 150px;
+  width: 200px;
   border: 2px solid black;
   border-radius: 24px;
   background-color: black;
-  color: aqua;
+  color: orange;
   border: none;
   font-size: 16px;
   font-weight: 500;
+  display: none;
 }
 
 .results__para {
@@ -192,27 +189,4 @@ SEARCH RESULTS
 
 .color__red {
   color: red;
-}
-
-.fa-spinner {
-  font-size: 60px;
-  color: aqua;
-  animation: rotate 600ms infinite linear;
-}
-
-.movies__loading--spinner {
-  display: none !important;
-}
-
-.movies .movies__loading--spinner {
-  display: block !important;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
